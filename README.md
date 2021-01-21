@@ -138,8 +138,8 @@ To build the go server code locally and run
 * Else you can follow https://golangcode.com/run-one-test/ to execute the test file
 <br />
 
+#### Command used to generate binary file
 ```shell script
-P.S.
-Apologies. Due to the time constraints, the test cases have only been written for core logic. They could be much more to cover all scenarios.
-The example cases in the problem statement have been well thought :).
+   env GOOS=linux GOARCH=amd64 go build -i -o server .
 ```
+This needs to be run from the parent package that has main.go file
