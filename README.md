@@ -99,7 +99,7 @@ The traversal to find the routes happens using Breadth first search.
 <br /> There are helper functions in the file that are used to find the estimated travel time based on the rules defined for different operating hours for the week.
 <br /> The structure is defined with train line as the key and if there's a new override to be made in future for a time period that affects multiple train stations, then the train lines would have to be updated
 
-####Structure
+#### Structure
 
 ```text
 {
@@ -115,13 +115,13 @@ The traversal to find the routes happens using Breadth first search.
 }
 ```
 
-####Considerations for train operating hours rules
+#### Considerations for train operating hours rules
 * There is a default key at trainline level which means that all the train lines that don't have a specific rule would fall under the default rules
 * There is also a default key under the trainline object which is a default timerange, meaning for that trainline what is the default behaviour if it doesn't fall any under time range check
 * To denote which days is the time range applicable for, the weekdays have to be listed out in the DaysOfWeek attribute as an array e.g. ["Sunday", "Monday", ...]
 * To mark if the train line is not operational in the time duration, a boolean flag IsNotOperational has been kept
 
-####Potential Improvement
+#### Potential Improvement
 The logic can further be optimised by caching the paths between 2 stations and using them to reduce computation time.
 
 ### Running the server without binary
