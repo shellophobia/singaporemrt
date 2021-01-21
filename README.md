@@ -19,14 +19,14 @@ The documentation is available below for the API usage and contract
     ```
   
 # API
-###GET /trainRoutes
+### GET /trainRoutes
 
-####Curl
+#### Curl
 ```shell script
 curl --location --request GET 'http://localhost:8080/trainRoutes?source=Boon%20Lay&destination=Little%20India&startTime=2019-01-31T08:00'
 ```
 
-####Request params
+#### Request params
 ```json
 {
     "source": "Boon Lay",
@@ -35,7 +35,7 @@ curl --location --request GET 'http://localhost:8080/trainRoutes?source=Boon%20L
 }
 ```
 
-####Response
+#### Response
 ```json
 {
     "source": "Boon Lay",
@@ -69,20 +69,20 @@ curl --location --request GET 'http://localhost:8080/trainRoutes?source=Boon%20L
 ```
 <br />
 
-###Code structure
-####Handlers
+### Code structure
+#### Handlers
 This package serves as a controller layer which can have validations on the API request. The logic if reusable by multiple handlers can be added into "logic" package
 
-####Utils
+#### Utils
 This package consists of the common utility helper functions
 
-####Common
+#### Common
 This package has the common types shared across the project
 
-###Overview of trainRoutes logic
+### Overview of trainRoutes logic
 On package initialisation the train line graph with the stations is generated using the linked list data structure
 Where a station/node has following attributes
-```shell script
+```text
 {
   Code // this param holds the station code
   Name // this param holds the station name
@@ -101,7 +101,7 @@ The traversal to find the routes happens using Breadth first search.
 
 ####Structure
 
-```json
+```text
 {
 	<TrainLineCode>: {
 		<TimeRange>: {
